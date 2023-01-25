@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap');
+
+:root {
+    --primary-text: rgba(12, 14, 54, 1);
+    --primary-color: rgba(247, 0, 88, 1);
+    --light-white-70: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#header {
+    padding: 2em;
+    display: grid;
+    gap: 2em;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: auto;
+}
+
+.header__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    opacity: 0.8;
+}
+
+.nav__link__item {
+    list-style: none;
+}
+
+.nav--link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1rem;
+    color: var(--primary-text);
+    position: relative;
+}
+
+.nav--link::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: var(--primary-color);
+    width: 0%;
+    left: 50%;
+    transition: all 0.5s ease;
+}
+
+.nav--link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.weather__container {
+    background-color: var(--primary-text);
+    display: flex;
+    gap: 0.5em;
+    color: var(--light-white-70);
+    align-items: center;
+    max-height: 5.2rem;
+}
+
+.weather__icon {
+    background-color: var(--primary-color);
+    height: 100%;
+    display: flex;
+    padding: 0.5em;
+}
+
+.weather__details {
+    display: grid;
+    gap: 0.25em;
+    padding: 0.5em;
+}
+
+.weather--text {
+    font-size: 0.675rem;
+    font-weight: 900;
+    line-height: 0.75rem;
+}
+
+.extra--info {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: #fff;
+    margin-left: 0.25em;
+}
+
+/* hero css */
+.hero {
+    max-height: 100vh;
+    background-image: url('../images/sebastian-staines-xZIFEPtRsRI-unsplash\ 1.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Work sans';
+    padding: 2em;
+    display: grid;
+    gap: 2em;
+}
+
+.hero--heading {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 3.125rem;
+    max-width: 33.625rem;
+}
+
+.hero--description {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.563rem;
+    max-width: 38.438rem;
+    color: rgba(58, 58, 58, 1);
+}
+
+.hero__buttons {
+    display: grid;
+    gap: 1em;
+}
+
+.btn {
+    padding: 0.938em 1.688em;
+    text-transform: uppercase;
+    font-weight: 700;
+    initial-letter: 0.05em;
+    line-height: 1.188rem;
+    cursor: pointer;
+}
+
+.season--btn {
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.season--btn:hover {
+    color: var(--primary-color);
+    background-color: var(--light-white-70);
+}
+
+.ticket--btn {
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+}
+
+.ticket--btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: #fff;
+}
+
+@media (min-width: 600px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav__links {
+        flex-direction: row;
+        gap: 1em;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .hero__buttons {
+        display: flex;
+        gap: 1em;
+    }
+}
+
+@media (min-width: 800px) {
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0 10%;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .hero {
+        padding: 5% 10%;
+    }
+}
+
+@media (min-width: 1000px) {
+    #header {
+        padding-left: 15%;
+    }
+
+    .nav__links {
+        gap: 4em;
+    }
+
+    .hero {
+        background-size: 100% 100%;
+        padding-left: 15%;
+        padding-bottom: 30%;
+    }
+}
